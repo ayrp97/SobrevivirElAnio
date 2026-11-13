@@ -1,0 +1,137 @@
+# depslib dependency file v1.0
+1794350536 source:d:\codeblocks\tp integrador\sobrevivirelaño\main.cpp
+	<iostream>
+	<string>
+	<iomanip>
+	"menu.h"
+	"Inversiones.h"
+	"Eventos.h"
+	"EventosInesperados.h"
+	<cstdlib>
+	<ctime>
+	"Highscore.h"
+	"Glosario.h"
+	"ConsejosFinancieros.h"
+
+1793297090 source:d:\codeblocks\tp integrador\menu.cpp
+	<iostream>
+	"menu.h"
+
+1793297094 d:\codeblocks\tp integrador\menu.h
+
+1793302256 source:d:\codeblocks\tp integrador\sobrevivirelaño\menu.cpp
+	<iostream>
+	"menu.h"
+
+1793297094 d:\codeblocks\tp integrador\sobrevivirelaño\menu.h
+
+1794348884 source:d:\codeblocks\tp integrador\sobrevivirelaño\inversiones.cpp
+	<iostream>
+	"Inversiones.h"
+	<iomanip>
+
+1794348800 d:\codeblocks\tp integrador\sobrevivirelaño\inversiones.h
+
+1793658832 source:d:\codeblocks\tp integrador\sobrevivirelaño\eventos.cpp
+	"Eventos.h"
+	<iostream>
+
+1793659546 d:\codeblocks\tp integrador\sobrevivirelaño\eventos.h
+
+1793659316 source:d:\codeblocks\tp integrador\sobrevivirelaño\eventosinespereados.cpp
+
+1794345622 source:d:\codeblocks\tp integrador\sobrevivirelaño\eventosinesperados.cpp
+	"EventosInesperados.h"
+	<iostream>
+	<cstdlib>
+	<string>
+
+1794345496 d:\codeblocks\tp integrador\sobrevivirelaño\eventosinesperados.h
+
+1793892002 source:d:\codeblocks\tp integrador\sobrevivirelaño\highscore.cpp
+	<iostream>
+	"Highscore.h"
+
+1793891734 d:\codeblocks\tp integrador\sobrevivirelaño\highscore.h
+	<string>
+
+1793894814 source:d:\codeblocks\tp integrador\sobrevivirelaño\glosario.cpp
+	<iostream>
+	<vector>
+	<string>
+	"Glosario.h"
+
+1793893724 d:\codeblocks\tp integrador\sobrevivirelaño\glosario.h
+
+1793978416 source:d:\codeblocks\tp integrador\sobrevivirelaño\consejosfinancieros.cpp
+	<iostream>
+	<vector>
+	<string>
+	"ConsejosFinancieros.h"
+
+1793978404 d:\codeblocks\tp integrador\sobrevivirelaño\consejosfinancieros.h
+
+1793960416 source:d:\ayr\utn frgp\programacioni\sobrevivirelaño\consejosfinancieros.cpp
+	<iostream>
+	<vector>
+	<string>
+	"ConsejosFinancieros.h"
+
+1793960404 d:\ayr\utn frgp\programacioni\sobrevivirelaño\consejosfinancieros.h
+
+1793640832 source:d:\ayr\utn frgp\programacioni\sobrevivirelaño\eventos.cpp
+	"Eventos.h"
+	<iostream>
+
+1793641546 d:\ayr\utn frgp\programacioni\sobrevivirelaño\eventos.h
+
+1794327622 source:d:\ayr\utn frgp\programacioni\sobrevivirelaño\eventosinesperados.cpp
+	"EventosInesperados.h"
+	<iostream>
+	<cstdlib>
+	<string>
+
+1794327496 d:\ayr\utn frgp\programacioni\sobrevivirelaño\eventosinesperados.h
+
+1793876814 source:d:\ayr\utn frgp\programacioni\sobrevivirelaño\glosario.cpp
+	<iostream>
+	<vector>
+	<string>
+	"Glosario.h"
+
+1793875724 d:\ayr\utn frgp\programacioni\sobrevivirelaño\glosario.h
+
+1793874002 source:d:\ayr\utn frgp\programacioni\sobrevivirelaño\highscore.cpp
+	<iostream>
+	"Highscore.h"
+
+1793873734 d:\ayr\utn frgp\programacioni\sobrevivirelaño\highscore.h
+	<string>
+
+1794330884 source:d:\ayr\utn frgp\programacioni\sobrevivirelaño\inversiones.cpp
+	<iostream>
+	"Inversiones.h"
+	<iomanip>
+
+1794330800 d:\ayr\utn frgp\programacioni\sobrevivirelaño\inversiones.h
+
+1794332536 source:d:\ayr\utn frgp\programacioni\sobrevivirelaño\main.cpp
+	<iostream>
+	<string>
+	<iomanip>
+	"menu.h"
+	"Inversiones.h"
+	"Eventos.h"
+	"EventosInesperados.h"
+	<cstdlib>
+	<ctime>
+	"Highscore.h"
+	"Glosario.h"
+	"ConsejosFinancieros.h"
+
+1793282694 d:\ayr\utn frgp\programacioni\sobrevivirelaño\menu.h
+
+1793287856 source:d:\ayr\utn frgp\programacioni\sobrevivirelaño\menu.cpp
+	<iostream>
+	"menu.h"
+
