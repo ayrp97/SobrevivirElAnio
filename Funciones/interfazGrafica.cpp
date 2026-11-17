@@ -20,6 +20,7 @@ void mostrarPanelEstado(int mes, string nombreMes, string jugador, float finanza
     cout << " TENENCIAS ACTUALES" << endl;
     cout << " Disponible en pesos:  $" << finanzas[FIN_DINERO] << endl;
     cout << " Fondo de emergencia:  $" << finanzas[FIN_EMERGENCIAS] << endl;
+    cout << " Ahorros en pesos:     $" << inversiones[INV_PESOS] << endl;
     cout << " Dolares:              " << setprecision(0) << inversiones[INV_DOLARES] << " USD" << endl;
     cout << " BTC:                  " << setprecision(6) << inversiones[INV_BITCOIN] << " BTC" << endl;
     cout << " S&P 500:              " << setprecision(2) << inversiones[INV_SP500] << " cuotas" << endl;
@@ -112,9 +113,7 @@ void mostrarMensaje(string mensaje) {
 
 void pausarConsola() {
     cout << endl;
-    cout << "Presiona ENTER para continuar...";
-    cin.ignore();
-    cin.get();
+    system("pause");
 }
 
 void limpiarConsola() {
@@ -245,6 +244,52 @@ void mostrarResultadoInversion(int opcionInversion, float inversiones[]) {
             cout << "Opcion de inversion incorrecta" << endl;
             break;
     }
+}
+
+void mostrarTicketInversion(int opcionInversion, float dineroDestinado, float unidadesAdquiridas, 
+                            float montoUtilizado, float vuelto, float cotizacionAplicada, 
+                            float precioDolar, float inversiones[]) {
+    string nombres[4] = {"Ahorro en Pesos (ARS)", "Dolares (USD)", "Bitcoin (BTC)", "S&P 500 (ETF)"};
+    string unidades[4] = {"ARS", "USD", "BTC", "cuotas"};
+    int decimales[4] = {2, 0, 8, 6};
+    int indicesInv[4] = {INV_PESOS, INV_DOLARES, INV_BITCOIN, INV_SP500};
+
+    limpiarConsola();
+
+    cout << fixed << setprecision(2);
+    cout << "==========================================" << endl;
+    cout << "    COMPROBANTE DE COMPRA DE INVERSION    " << endl;
+    cout << "==========================================" << endl;
+
+    if (opcionInversion < 1 || opcionInversion > 4) {
+        cout << " Operacion cancelada: opcion no valida." << endl;
+        cout << " Reintegrado:     $" << vuelto << endl;
+    } else {
+        for (int i = 0; i < 4; i++) {
+            if (opcionInversion == i + 1) {
+                cout << " Instrumento:     " << nombres[i] << endl;
+
+                if (opcionInversion == 3 || opcionInversion == 4) {
+                    cout << " Cotizacion:      $" << cotizacionAplicada << " USD (TC: $" << precioDolar << ")" << endl;
+                } else {
+                    cout << " Cotizacion:      $" << cotizacionAplicada << " ARS" << endl;
+                }
+
+                cout << "------------------------------------------" << endl;
+                cout << " Monto destinado: $" << dineroDestinado << endl;
+                cout << " Adquirido:       " << setprecision(decimales[i]) << unidadesAdquiridas << " " << unidades[i] << setprecision(2) << endl;
+                cout << " Total debitado:  $" << montoUtilizado << endl;
+                cout << " Vuelto a cuenta: $" << vuelto << endl;
+                cout << "------------------------------------------" << endl;
+                cout << " Tenencia total:  " << setprecision(decimales[i]) << inversiones[indicesInv[i]] << " " << unidades[i] << setprecision(2) << endl;
+            }
+        }
+    }
+
+    cout << "==========================================" << endl;
+
+    pausarConsola();
+    limpiarConsola();
 }
 
 void mostrarEventoFijoMes(int mes) {

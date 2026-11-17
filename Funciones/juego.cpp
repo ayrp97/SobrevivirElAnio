@@ -137,8 +137,16 @@ void jugarPartida(int &sesionCantidadPartidas, float &sesionMejorPatrimonio, str
             mostrarMenuInversiones();
             int opcionInversion = leerOpcion(1, 4);
 
-            realizarInversion(opcionInversion, dineroParaInvertir, finanzas, inversiones, cotizaciones);
-            mostrarResultadoInversion(opcionInversion, inversiones);
+            float unidadesAdquiridas = 0.0f;
+            float montoUtilizado = 0.0f;
+            float vuelto = 0.0f;
+            float cotizacionAplicada = 0.0f;
+
+            realizarInversion(opcionInversion, dineroParaInvertir, finanzas, inversiones, cotizaciones, 
+                              unidadesAdquiridas, montoUtilizado, vuelto, cotizacionAplicada);
+            mostrarTicketInversion(opcionInversion, dineroParaInvertir, unidadesAdquiridas, 
+                                   montoUtilizado, vuelto, cotizacionAplicada, 
+                                   cotizaciones[COT_DOLAR], inversiones);
 
             float ahorroDelMes = dineroParaInvertir + dineroParaFondo;
             if (contadores[CNT_MES_MAYOR_AHORRO] == 0 || ahorroDelMes > finanzas[FIN_MAYOR_AHORRO]) {

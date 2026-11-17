@@ -1,32 +1,56 @@
 #include "inversiones.h"
 #include "interfazGrafica.h"
 
-void realizarInversion(int opcionInversion, float dineroParaInvertir, float finanzas[], float inversiones[], float cotizaciones[]) {
+void realizarInversion(int opcionInversion, float dineroParaInvertir, float finanzas[], 
+                       float inversiones[], float cotizaciones[], 
+                       float &unidadesAdquiridas, float &montoUtilizado, 
+                       float &vuelto, float &cotizacionAplicada) {
+    
+    unidadesAdquiridas = 0.0f;
+    montoUtilizado = 0.0f;
+    vuelto = 0.0f;
+    cotizacionAplicada = 0.0f;
+
     switch (opcionInversion) {
         case 1:
             inversiones[INV_PESOS] += dineroParaInvertir;
+            unidadesAdquiridas = dineroParaInvertir;
+            montoUtilizado = dineroParaInvertir;
+            cotizacionAplicada = 1.0f;
             break;
 
         case 2: {
             int dolaresComprados = dineroParaInvertir / cotizaciones[COT_DOLAR];
             inversiones[INV_DOLARES] += dolaresComprados;
 
+            cotizacionAplicada = cotizaciones[COT_DOLAR];
+            montoUtilizado = dolaresComprados * cotizaciones[COT_DOLAR];
+            vuelto = dineroParaInvertir - montoUtilizado;
+            unidadesAdquiridas = dolaresComprados;
+
             // Devuelve los pesos sobrantes (vuelto de compra entera) al dinero disponible
-            finanzas[FIN_DINERO] += (dineroParaInvertir - dolaresComprados * cotizaciones[COT_DOLAR]);
+            finanzas[FIN_DINERO] += vuelto;
             break;
         }
 
         case 3:
-            inversiones[INV_BITCOIN] += (dineroParaInvertir / cotizaciones[COT_DOLAR]) / cotizaciones[COT_BITCOIN];
+            cotizacionAplicada = cotizaciones[COT_BITCOIN];
+            unidadesAdquiridas = (dineroParaInvertir / cotizaciones[COT_DOLAR]) / cotizaciones[COT_BITCOIN];
+            inversiones[INV_BITCOIN] += unidadesAdquiridas;
+            montoUtilizado = dineroParaInvertir;
             break;
 
         case 4:
-            inversiones[INV_SP500] += (dineroParaInvertir / cotizaciones[COT_DOLAR]) / cotizaciones[COT_SP500];
+            cotizacionAplicada = cotizaciones[COT_SP500];
+            unidadesAdquiridas = (dineroParaInvertir / cotizaciones[COT_DOLAR]) / cotizaciones[COT_SP500];
+            inversiones[INV_SP500] += unidadesAdquiridas;
+            montoUtilizado = dineroParaInvertir;
             break;
 
         default:
             // Si la opcion no es valida, reintegra el dinero destinado a invertir
             finanzas[FIN_DINERO] += dineroParaInvertir;
+            vuelto = dineroParaInvertir;
             break;
     }
 }

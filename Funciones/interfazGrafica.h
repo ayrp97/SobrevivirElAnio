@@ -75,6 +75,9 @@ void mostrarDistribuciones();
 
 void mostrarMenuInversiones();
 void mostrarResultadoInversion(int opcionInversion, float inversiones[]);
+void mostrarTicketInversion(int opcionInversion, float dineroDestinado, float unidadesAdquiridas, 
+                            float montoUtilizado, float vuelto, float cotizacionAplicada, 
+                            float precioDolar, float inversiones[]);
 
 // FUNCIONES DE INTERFAZ ANTIGUO Eventos.cpp / .h
 // ==========================================
