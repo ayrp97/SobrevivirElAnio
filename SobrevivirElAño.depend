@@ -135,3 +135,18 @@
 	<iostream>
 	"menu.h"
 
+1794705941 source:d:\ayr\utn frgp\programacioni\sobrevivirelanio\main.cpp
+	<iostream>
+	<string>
+	<iomanip>
+	<cstdlib>
+	<ctime>
+	"Funciones/interfazGrafica.h"
+	"Funciones/juego.h"
+
+1794701151 d:\ayr\utn frgp\programacioni\sobrevivirelanio\funciones\interfazgrafica.h
+	<string>
+
+1794624792 d:\ayr\utn frgp\programacioni\sobrevivirelanio\funciones\juego.h
+	<string>
+
