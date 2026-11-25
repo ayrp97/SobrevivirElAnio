@@ -133,7 +133,9 @@ void jugarPartida(int &sesionCantidadPartidas, float &sesionMejorPatrimonio, str
             finanzas[FIN_DINERO] -= (dineroParaFondo + dineroParaInvertir);
 
             mostrarResumenDistribucion(dineroParaInvertir, dineroParaFondo, finanzas);
+            pausarConsola();
 
+            limpiarConsola();
             mostrarMenuInversiones();
             int opcionInversion = leerOpcion(1, 4);
 
@@ -182,4 +184,4 @@ void jugarPartida(int &sesionCantidadPartidas, float &sesionMejorPatrimonio, str
         mostrarEvaluacionFinal(finanzas[FIN_PATRIMONIO_AJUSTADO], PATRIMONIO_INICIAL);
     }
     pausarConsola();
-}
+};
