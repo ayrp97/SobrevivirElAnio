@@ -32,21 +32,21 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
-		<Unit filename="ConsejosFinancieros.cpp" />
-		<Unit filename="ConsejosFinancieros.h" />
-		<Unit filename="Eventos.cpp" />
-		<Unit filename="Eventos.h" />
-		<Unit filename="EventosInesperados.cpp" />
-		<Unit filename="EventosInesperados.h" />
-		<Unit filename="Glosario.cpp" />
-		<Unit filename="Glosario.h" />
-		<Unit filename="Highscore.cpp" />
-		<Unit filename="Highscore.h" />
-		<Unit filename="Inversiones.cpp" />
-		<Unit filename="Inversiones.h" />
+		<Unit filename="Funciones/eventos.cpp" />
+		<Unit filename="Funciones/eventos.h" />
+		<Unit filename="Funciones/eventosInesperados.cpp" />
+		<Unit filename="Funciones/eventosInesperados.h" />
+		<Unit filename="Funciones/highscore.cpp" />
+		<Unit filename="Funciones/highscore.h" />
+		<Unit filename="Funciones/inicializacion.cpp" />
+		<Unit filename="Funciones/inicializacion.h" />
+		<Unit filename="Funciones/interfazGrafica.cpp" />
+		<Unit filename="Funciones/interfazGrafica.h" />
+		<Unit filename="Funciones/inversiones.cpp" />
+		<Unit filename="Funciones/inversiones.h" />
+		<Unit filename="Funciones/juego.cpp" />
+		<Unit filename="Funciones/juego.h" />
 		<Unit filename="main.cpp" />
-		<Unit filename="menu.cpp" />
-		<Unit filename="menu.h" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
 		</Extensions>

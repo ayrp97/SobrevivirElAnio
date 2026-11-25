@@ -72,8 +72,6 @@ void mostrarResumenFinal(string jugador, float finanzas[], float inversiones[], 
     cout << "Bitcoin acumulado: " << setprecision(8) << inversiones[INV_BITCOIN] << " BTC" << endl;
     cout << "S&P 500 acumulado: " << setprecision(8) << inversiones[INV_SP500] << " SP500" << endl;
     cout << setprecision(2) << endl;
-    cout << "Inflacion acumulada: " << porcentajeInflacion << "%" << endl;
-    cout << "Patrimonio ajustado por inflacion: $" << finanzas[FIN_PATRIMONIO_AJUSTADO] << endl;
     cout << endl;
     cout << "Mayor ahorro mensual: $" << finanzas[FIN_MAYOR_AHORRO] << endl;
     cout << "Mes de mayor ahorro: " << contadores[CNT_MES_MAYOR_AHORRO] << endl;
@@ -84,7 +82,9 @@ void mostrarResumenFinal(string jugador, float finanzas[], float inversiones[], 
     cout << "Meses sin fondo de emergencia: " << contadores[CNT_MESES_SIN_FONDO] << endl;
     cout << endl;
     cout << "====================================" << endl;
-    cout << "El Patrimonio final es de: $" << finanzas[FIN_PATRIMONIO_FINAL] << " pesos" << endl;
+    cout << "El Patrimonio final es de: $" << finanzas[FIN_PATRIMONIO_FINAL] << " pesos" << endl << endl;
+    cout << "Inflacion acumulada: " << porcentajeInflacion << "%" << endl;
+    cout << "Patrimonio ajustado por inflacion: $" << finanzas[FIN_PATRIMONIO_AJUSTADO] << endl;
     cout << "====================================" << endl;
     cout << endl << endl;
 }
